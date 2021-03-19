@@ -99,3 +99,9 @@ Activity Log helps us to monitor network resource configurations and detect chan
 
 Also Azure Monitor collect logs from AKS components such as control-plane, api-server and kube-controller-manager which help us investigate the issues. 
 
+
+References:
+
+- http://docs.kubernetes.io/
+- http://docs.microsoft.com/en-US/azure/aks
+
