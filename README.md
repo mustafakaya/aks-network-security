@@ -103,5 +103,5 @@ Also Azure Monitor collect logs from AKS components such as control-plane, api-s
 References:
 
 - http://docs.kubernetes.io/
-- http://docs.microsoft.com/en-US/azure/aks
+- http://docs.microsoft.com/en-US/azure
 
