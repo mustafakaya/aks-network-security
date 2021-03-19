@@ -61,8 +61,8 @@ Most secure design is deploy API Management inside the cluster Virtual Network. 
 
 ![image](https://user-images.githubusercontent.com/9195953/111772468-f2490400-88bd-11eb-8b0e-3b81a6c45151.png)
 
-![Uploading image.png…]()
-	
+![image](https://user-images.githubusercontent.com/9195953/111772617-1b699480-88be-11eb-8d6e-18f78425753e.png)
+
 
 
 
