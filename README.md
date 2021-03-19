@@ -1,5 +1,4 @@
-# Network Security B
-Network Security Baseline for Azure Kubernetes Service (AKS)
+# Azure Kubernetes Service : Network Security Recommendations
 
 Network security recommendations focus on specifying which network protocols, TCP/UDP ports, and network connected services are allowed or denied access to Azure services. We have to ensure that all Virtual Network subnet deployments have a Network Security Group applied with network access controls specific to your application's trusted ports and sources. 
 
@@ -10,7 +9,7 @@ With Kubenet, pods can't communicate directly with each other. Instead, User Def
 There's an important point: using extra routing with UDR and IP forwarding in Kubenet may reduce network performance. 
 
 
-	
+![image](https://user-images.githubusercontent.com/9195953/111771755-1fe17d80-88bd-11eb-8fae-8a122b27a8d5.png)  ![image](https://user-images.githubusercontent.com/9195953/111771795-2a037c00-88bd-11eb-9ab4-cd74263149b5.png)
 	
  
 
@@ -48,6 +47,7 @@ Azure Application Gateway is a WAF that can integrate with AKS clusters to provi
 
 There're other third party solutions provides same functions such as Barracuda WAF on Azure .
 
+![image](https://user-images.githubusercontent.com/9195953/111772456-ecebb980-88bd-11eb-8be3-f7c2e2914c82.png)
 
 
 
@@ -59,7 +59,9 @@ We can use an API gateway for authentication, authorization, throttling, caching
 
 Most secure design is deploy API Management inside the cluster Virtual Network. In this deployment model, there's not any service exposed as public endpoint so all API traffic will remain within the virtual network.  That looks complex but that's a most secure option and if you want, you can hide both API Management and AKS inside virtual network using the Internal Mode.
 
-	
+![image](https://user-images.githubusercontent.com/9195953/111772468-f2490400-88bd-11eb-8b0e-3b81a6c45151.png)
+
+![Uploading image.png…]()
 	
 
 
@@ -96,4 +98,4 @@ We can create custom policies using "Microsoft.ContainerService" and "Microsoft.
 Activity Log helps us to monitor network resource configurations and detect changes for network resources related to AKS clusters. Create alerts within Azure Monitor that will trigger when changes to critical network resources place take. 
 
 Also Azure Monitor collect logs from AKS components such as control-plane, api-server and kube-controller-manager which help us investigate the issues. 
-![image](https://user-images.githubusercontent.com/9195953/111771120-58348c00-88bc-11eb-94ee-c00d0cea5840.png)
+
