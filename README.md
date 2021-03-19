@@ -1,6 +1,6 @@
 # Azure Kubernetes Service : Network Security Recommendations
 
-Network security recommendations focus on specifying which network protocols, TCP/UDP ports, and network connected services are allowed or denied access to Azure services. We have to ensure that all Virtual Network subnet deployments have a Network Security Group applied with network access controls specific to your application's trusted ports and sources. 
+Network security recommendations focus on specifying which network protocols, TCP/UDP ports, and network connected services are allowed or denied access to Azure services. 
 
 We have two network options for AKS cluster network which are kubenet and Azure CNI. Kubenet is default and simple network plugin for AKS clusters and typically used together with a cloud provider. With kubenet, nodes get an IP address from the Azure virtual network subnet and pods receive an IP address from a logically different address space.  With Azure CNI, every pods get an IP address from the subnet and can be accessed directly.  Kubenet is basic networking and Azure CNI is advanced networking. 
 
@@ -22,7 +22,7 @@ If you wish to restrict egress traffic, a limited number of ports and addresses 
 
 ## 	2- Use AKS Network Policies
 
-Network security group and route table automatically created with AKS cluster and AKS automatically modifies network security groups. But network security groups can't be used to lock down the outbound traffic from an AKS cluster and blocking internal subnet traffic.  
+We have to ensure that all Virtual Network subnet deployments have a Network Security Group applied with network access controls specific to your application's trusted ports and sources. Network security group and route table automatically created with AKS cluster and AKS automatically modifies network security groups. But network security groups can't be used to lock down the outbound traffic from an AKS cluster and blocking internal subnet traffic.  
 
 All traffic is allowed between pods within a cluster, we should implement a cloud native way to automatically handle traffic when new pods created.  And blocking internal subnet traffic using network security groups and firewalls is not supported. 
 
